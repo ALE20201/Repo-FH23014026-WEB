@@ -1,0 +1,14 @@
+D:\Projects\PP1 - Alex Monge Arias\PP1\bin\Debug\net8.0\PP1.exe
+D:\Projects\PP1 - Alex Monge Arias\PP1\bin\Debug\net8.0\PP1.deps.json
+D:\Projects\PP1 - Alex Monge Arias\PP1\bin\Debug\net8.0\PP1.runtimeconfig.json
+D:\Projects\PP1 - Alex Monge Arias\PP1\bin\Debug\net8.0\PP1.dll
+D:\Projects\PP1 - Alex Monge Arias\PP1\bin\Debug\net8.0\PP1.pdb
+D:\Projects\PP1 - Alex Monge Arias\PP1\obj\Debug\net8.0\PP1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\PP1 - Alex Monge Arias\PP1\obj\Debug\net8.0\PP1.AssemblyInfoInputs.cache
+D:\Projects\PP1 - Alex Monge Arias\PP1\obj\Debug\net8.0\PP1.AssemblyInfo.cs
+D:\Projects\PP1 - Alex Monge Arias\PP1\obj\Debug\net8.0\PP1.csproj.CoreCompileInputs.cache
+D:\Projects\PP1 - Alex Monge Arias\PP1\obj\Debug\net8.0\PP1.dll
+D:\Projects\PP1 - Alex Monge Arias\PP1\obj\Debug\net8.0\refint\PP1.dll
+D:\Projects\PP1 - Alex Monge Arias\PP1\obj\Debug\net8.0\PP1.pdb
+D:\Projects\PP1 - Alex Monge Arias\PP1\obj\Debug\net8.0\PP1.genruntimeconfig.cache
+D:\Projects\PP1 - Alex Monge Arias\PP1\obj\Debug\net8.0\ref\PP1.dll
