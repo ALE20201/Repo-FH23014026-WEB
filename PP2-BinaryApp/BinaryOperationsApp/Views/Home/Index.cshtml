@@ -1,0 +1,98 @@
+﻿@model BinaryOperationsApp.Models.BinaryModel
+@{
+    ViewData["Title"] = "Operaciones Binarias";
+}
+
+<h1>Operaciones con números binarios</h1>
+
+<form method="post" asp-action="Index" asp-controller="Home">
+    <div class="mb-3">
+        <label asp-for="A" class="form-label">a</label>
+        <input asp-for="A" class="form-control" />
+        <span asp-validation-for="A" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="B" class="form-label">b</label>
+        <input asp-for="B" class="form-control" />
+        <span asp-validation-for="B" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Calcular</button>
+</form>
+
+<hr />
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+@if (Model != null && !string.IsNullOrEmpty(Model.BinAByte))
+{
+    <h2>Resultados</h2>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Bin</th>
+                <th>Oct</th>
+                <th>Dec</th>
+                <th>Hex</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>a</td>
+                <td>@Model.BinAByte</td>
+                <td>@Model.AOct</td>
+                <td>@Model.ADec</td>
+                <td>@Model.AHex</td>
+            </tr>
+            <tr>
+                <td>b</td>
+                <td>@Model.BinBByte</td>
+                <td>@Model.BOct</td>
+                <td>@Model.BDec</td>
+                <td>@Model.BHex</td>
+            </tr>
+
+            <tr>
+                <td>a AND b</td>
+                <td>@(string.IsNullOrEmpty(Model.AndBin) ? "0" : Model.AndBin)</td>
+                <td>@(string.IsNullOrEmpty(Model.AndOct) ? "0" : Model.AndOct)</td>
+                <td>@(string.IsNullOrEmpty(Model.AndDec) ? "0" : Model.AndDec)</td>
+                <td>@(string.IsNullOrEmpty(Model.AndHex) ? "0" : Model.AndHex)</td>
+            </tr>
+            <tr>
+                <td>a OR b</td>
+                <td>@(string.IsNullOrEmpty(Model.OrBin) ? "0" : Model.OrBin)</td>
+                <td>@(string.IsNullOrEmpty(Model.OrOct) ? "0" : Model.OrOct)</td>
+                <td>@(string.IsNullOrEmpty(Model.OrDec) ? "0" : Model.OrDec)</td>
+                <td>@(string.IsNullOrEmpty(Model.OrHex) ? "0" : Model.OrHex)</td>
+            </tr>
+            <tr>
+                <td>a XOR b</td>
+                <td>@(string.IsNullOrEmpty(Model.XorBin) ? "0" : Model.XorBin)</td>
+                <td>@(string.IsNullOrEmpty(Model.XorOct) ? "0" : Model.XorOct)</td>
+                <td>@(string.IsNullOrEmpty(Model.XorDec) ? "0" : Model.XorDec)</td>
+                <td>@(string.IsNullOrEmpty(Model.XorHex) ? "0" : Model.XorHex)</td>
+            </tr>
+            <tr>
+                <td>a + b</td>
+                <td>@(string.IsNullOrEmpty(Model.SumBin) ? "0" : Model.SumBin)</td>
+                <td>@(string.IsNullOrEmpty(Model.SumOct) ? "0" : Model.SumOct)</td>
+                <td>@(string.IsNullOrEmpty(Model.SumDec) ? "0" : Model.SumDec)</td>
+                <td>@(string.IsNullOrEmpty(Model.SumHex) ? "0" : Model.SumHex)</td>
+            </tr>
+            <tr>
+                <td>a • b</td>
+                <td>@(string.IsNullOrEmpty(Model.MulBin) ? "0" : Model.MulBin)</td>
+                <td>@(string.IsNullOrEmpty(Model.MulOct) ? "0" : Model.MulOct)</td>
+                <td>@(string.IsNullOrEmpty(Model.MulDec) ? "0" : Model.MulDec)</td>
+                <td>@(string.IsNullOrEmpty(Model.MulHex) ? "0" : Model.MulHex)</td>
+            </tr>
+        </tbody>
+    </table>
+}
