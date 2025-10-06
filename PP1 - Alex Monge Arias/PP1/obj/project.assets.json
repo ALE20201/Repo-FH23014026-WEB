@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\PP1 - Alex Monge Arias\\PP1\\PP1.csproj",
+      "projectUniqueName": "D:\\Projects\\Repo-FH23014026-WEB\\PP1 - Alex Monge Arias\\PP1\\PP1.csproj",
       "projectName": "PP1",
-      "projectPath": "D:\\Projects\\PP1 - Alex Monge Arias\\PP1\\PP1.csproj",
+      "projectPath": "D:\\Projects\\Repo-FH23014026-WEB\\PP1 - Alex Monge Arias\\PP1\\PP1.csproj",
       "packagesPath": "C:\\Users\\xpc\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\PP1 - Alex Monge Arias\\PP1\\obj\\",
+      "outputPath": "D:\\Projects\\Repo-FH23014026-WEB\\PP1 - Alex Monge Arias\\PP1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
