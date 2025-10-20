@@ -52,7 +52,7 @@ namespace BinaryOperationsApp.Services
             return string.IsNullOrEmpty(r) ? "0" : r;
         }
 
-        // Safe conversion: devuelve 0 si la cadena no es parseable como binario.
+        //  devuelve 0 si la cadena no es parseable como binario.
         public static int BinToInt(string? bin)
         {
             if (string.IsNullOrWhiteSpace(bin)) return 0;
