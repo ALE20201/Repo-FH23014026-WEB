@@ -19,7 +19,7 @@
 - Stack Overflow: [(https://stackoverflow.com/questions)]
 
 ## Prompts y respuestas de chatbots utilizados
-- ChatGPT : [(https://chatgpt.com/share/68d02f2f-d578-8006-b19c-784cda1ed968)] dsfsaljfksapdofsajdfjhsdjhfjshdfhpsdhfhpashñfñsjfjhsjhfñsafduhasfnñsddjhñfhsoihfdpshdpfhpasihdfishpfusañihdfpñusdhfihsdihfpusagfsahfosadfpshpfhsdpfhspdhfposihdfihpsdfpsahdfhokishdfñoihsduhfiuohsdfoshoifhosdihfodhofhy
+- ChatGPT : [(https://chatgpt.com/share/68f6a662-00a8-8006-8b1f-8a3b701c0592)] 
 
 ## Preguntas del enunciado — respuestas
 - ¿Es posible enviar valores en el Body (por ejemplo, en el Form) del Request de tipo GET?
