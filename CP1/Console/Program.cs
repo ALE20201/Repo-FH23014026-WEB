@@ -19,15 +19,29 @@
 
     private static double Recursive(double z, double n)
     {
-        return n == 0 || n == 1 ? n : Recursive(z, n - 1) + Recursive(z, n - 2);
+        if (n == 0 || n == 1)
+            return 1;
+        else
+            return z * Recursive(z, n - 1) + Recursive(z, n - 2);
     }
 
-    private static double Iterative(double z, double n)
+    private static double Iterative(double z, double n)//ChatGPT
     {
-        return 1.0;
+        if (n == 0 || n == 1)
+            return 1;
+        double prev2 = 1;
+        double prev1 = 1;
+        double current = 1;
+        for (int i = 2; i <= n; i++)
+        {
+            current = z * prev1 + prev2;
+            prev2 = prev1;
+            prev1 = current;
+        }
+        return current;
     }
 
-    private double Round(double value)
+    private static double Round(double value)//ChatGPT
     {
         return Math.Round(value, 10);
     }

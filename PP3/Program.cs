@@ -77,11 +77,6 @@ static string BuildResultXml(string ori, string neu)
 static string EscapeXml(string s) => SecurityElement.Escape(s) ?? string.Empty;
 
 // --- Endpoint /include (POST) ---
-// Route: /include/{position}
-// position: int >= 0 (route)
-// value: query (string, length > 0)
-// text: form (string, length > 0)
-// xml: optional header
 app.MapPost("/include/{position:int}", async (HttpRequest req, int position) =>
 {
     if (position < 0) return Error("'position' must be 0 or higher");
@@ -118,10 +113,6 @@ app.MapPost("/include/{position:int}", async (HttpRequest req, int position) =>
 }).WithName("IncludeEndpoint");
 
 // --- Endpoint /replace (PUT) ---
-// Route: /replace/{length}
-// length: int > 0
-// value: query (string, length > 0)
-// text: form (string, length > 0)
 app.MapPut("/replace/{length:int}", async (HttpRequest req, int length) =>
 {
     if (length <= 0) return Error("'length' must be greater than 0");
@@ -158,9 +149,6 @@ app.MapPut("/replace/{length:int}", async (HttpRequest req, int length) =>
 }).WithName("ReplaceEndpoint");
 
 // --- Endpoint /erase (DELETE) ---
-// Route: /erase/{length}
-// length: int > 0
-// text: form (string, length > 0)
 app.MapDelete("/erase/{length:int}", async (HttpRequest req, int length) =>
 {
     if (length <= 0) return Error("'length' must be greater than 0");
