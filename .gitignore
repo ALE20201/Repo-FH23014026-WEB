@@ -23,6 +23,8 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json
@@ -54,3 +56,9 @@ TestResult.xml
 nunit-*.xml
 
 repos/
+
+**/bin/
+**/obj/
+*.db
+data/
+Migrations/
