@@ -28,7 +28,7 @@ public class ShipsUnitTests
     {
         var expected = 11;
         var ships = new Ships();
-        var actual = ships.EndOfBritannic().Day;
+        var actual = ships.EndOfBritannic().Month;
         Assert.Equal(expected, actual);
     }
 
@@ -39,6 +39,19 @@ public class ShipsUnitTests
         var expected = current - 1916;
         var ships = new Ships();
         var actual = current - ships.EndOfBritannic().Year;
+        Assert.Equal(expected, actual);
+    }
+
+    public DateTime EndOfOlympic()
+    {
+        return new DateTime(1935, 4, 12);
+    }
+    [Fact]
+    public void OlympicWasOutOfServiceSpecificDay()//ChatGpt
+    {
+        var expected = 12;
+        var ships = new Ships();
+        var actual = ships.EndOfOlympic().Day;
         Assert.Equal(expected, actual);
     }
 }

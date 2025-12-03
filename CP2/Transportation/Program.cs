@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddSingleton<IAirplanes, Airbus>();
+builder.Services.AddKeyedSingleton<IAirplanes, Airbus>("airbus");
+builder.Services.AddKeyedSingleton<IAirplanes, Boeing>("boeing");//ChatGPT
 
 var app = builder.Build();
 

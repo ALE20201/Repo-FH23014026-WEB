@@ -13,17 +13,20 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index([FromServices] IAirplanes airbus, [FromServices] IAirplanes boeing)
+    public IActionResult Index(
+    [FromKeyedServices("airbus")] IAirplanes airbus,
+    [FromKeyedServices("boeing")] IAirplanes boeing)//Cntrl c + Cntrl v.
     {
-        // using var db = new CarsContext();
-        // var customer = db.Customers.First((c) => c.LastName == "Mouse");
-        // var ownership = db.CustomerOwnerships.First((o) => o.CustomerId == customer.CustomerId);
-        // var vin = db.CarVins.First((v) => v.Vin == ownership.Vin);
-        // var model = db.Models.First((m) => m.ModelId == vin.Vin);
-        // var brand = db.Brands.First((b) => b.BrandId == model.BrandId);
-        // ViewData["BrandModel"] = $"{brand.BrandName} - {model.ModelName}";
+        using var db = new CarsContext();
+        var customer = db.Customers.First((c) => c.LastName == "Mouse");
+        var ownership = db.CustomerOwnerships.First((o) => o.CustomerId == customer.CustomerId);
+        var vin = db.CarVins.First((v) => v.Vin == ownership.Vin);
+        var model = db.Models.First((m) => m.ModelId == vin.Vin);
+        var brand = db.Brands.First((b) => b.BrandId == model.BrandId);
+        ViewData["BrandModel"] = $"{brand.BrandName} - {model.ModelName}";
 
-        ViewData["Dealer"] = "";
+        var dealer = db.Dealers.First(d => d.DealerId == ownership.DealerId);//ChatGPT
+        ViewData["Dealer"] = $"{dealer.DealerName} - {dealer.DealerAddress}";//ChatGPT
 
         ViewData["Airbus"] = $"{airbus.GetBrand}: {string.Join(" - ", airbus.GetModels)}";
         ViewData["Boeing"] = $"{boeing.GetBrand}: {string.Join(" - ", boeing.GetModels)}";
